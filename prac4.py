@@ -1,6 +1,4 @@
 # prac4.py
-import os
-from os import path
 
 def read_file():
 
@@ -10,11 +8,10 @@ def read_file():
     '''
 
     file_name = input()
-    os.chdir("/home/student/workspace/yeardream_04")
 
     try:
-        if path.exists(file_name):
-            print(file_name)
+        open(file_name)
+        print(file_name)
     except FileNotFoundError:
         print("예외 발생. 파일이 존재하지 않습니다.")
 
