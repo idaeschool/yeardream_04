@@ -1,18 +1,42 @@
 # prac5.py
 
+# 동물원 클래스
 class Zoo:
+    # 생성자
     def __init__(self):
-        pass
+        # 동물들을 저장할 리스트 생성
+        self.animals = []
 
+    # 동물 추가 메서드
     def add_animal(self, animal):
-        pass
+        # 동물 리스트에 추가
+        self.animals.append(animal)
 
+    # 동물 출력 메서드
     def show_animals(self):
-        pass
+        print('현재 동물원에는 다음 동물들이 있습니다 :')
 
+        # 동물 목록 길이 만큼 반복
+        for animal in self.animals :
+            print(f'- {animal.name} the {animal.species}')
+
+    # 동물 종류 검색
+    def show_animals_by_species(self, species) :
+        print(f'{species} 종류의 동물을 출력합니다.')
+
+        # 동물 목록 길이 만큼 반복
+        for animal in self.animals :
+            # 동일한 동물을 찾았을 때
+            if animal.species == species :
+                # 해당 동물 출력
+                print(f'- {animal.name} the {animal.species}')
+
+# 동물 클래스
 class Animal:
+    # 생성자(동물이름, 동물 종류)
     def __init__(self, name, species):
-        pass
+        self.name = name        # 동물 이름
+        self.species = species  # 동물 종류
 
 def main():
     # 동물원을 선언하고 10마리의 동물들을 추가합니다.
