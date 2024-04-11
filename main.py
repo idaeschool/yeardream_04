@@ -4,13 +4,12 @@ import prac1 # prac1.py를 불러오겠다! (경로 중요)
 import prac2 # prac2.py를 불러오겠다! (경로 중요)
 import prac3
 import prac4
-import prac4_김영우
 import prac5
 
 def main():
     parser = argparse.ArgumentParser(description="Run practice Python scripts.")
     parser.add_argument('script',
-                        choices=['prac1', 'prac2', 'prac3', 'prac4', 'prac4_김영우','prac5'], 
+                        choices=['prac1', 'prac2', 'prac3', 'prac4', 'prac5'], 
                         help='The script to run')
     args = parser.parse_args()
 
@@ -22,8 +21,6 @@ def main():
         prac3.calculate_average()
     elif args.script == 'prac4':
         prac4.read_file()
-    elif args.script == 'prac4_김영우':
-        prac4_김영우.read_file()
     elif args.script == 'prac5':
         prac5.main()
 
