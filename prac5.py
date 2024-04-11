@@ -1,18 +1,37 @@
 # prac5.py
 
-class Zoo:
-    def __init__(self):
-        pass
-
-    def add_animal(self, animal):
-        pass
-
-    def show_animals(self):
-        pass
-
 class Animal:
     def __init__(self, name, species):
-        pass
+        self.name = name
+        self.species = species
+
+class Zoo:
+    def __init__(self):
+        self.animals :list[Animal]= []
+
+    def add_animal(self, animal:Animal):
+        for ani in self.animals:
+            if ani.name == animal.name and ani.species == animal.species:
+                print(f"\"{animal.name} the {animal.species}\"은 이미 동물원에 있습니다. 다른 이름을 사용하거나, 다른 종으로 추가해주세요.")
+                return
+        
+        self.animals.append(animal)
+
+    def show_animals(self):
+        print("현재 동물원에는 다음 동물들이 있습니다 : ")
+        for animal in self.animals:
+            print(f"- {animal.name} the {animal.species}")
+
+    def show_animals_by_species(self, species:str):
+        """
+        입력받은 종의 동물만 출력합니다.
+        """
+        for animal in self.animals:
+            if animal.species == species:
+                print(f"- {animal.name} the {animal.species}")
+
+
+
 
 def main():
     # 동물원을 선언하고 10마리의 동물들을 추가합니다.
