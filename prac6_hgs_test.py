@@ -22,10 +22,7 @@ class Monster(Character):
 	def __init__(self, name, health=50):
 		super().__init__(name, health)
 
-def game_loop():
-	player = Player("Hero")
-	monster = Monster("Goblin")
-	
+def fight(player:Character, monster:Character):
 	while player.is_alive() and monster.is_alive():
 		player.attack(monster)
 		if monster.is_alive():
@@ -34,6 +31,13 @@ def game_loop():
 		print(f"{player.name} defeated {monster.name}!")
 	else:
 		print("You have been defeated by the monster...")
+
+def game_loop():
+	hero = Player("Hero")
+	goblinA = Monster("GoblinA")
+	goblinB = Monster("GoblinB")
+	fight(hero, goblinA)
+	fight(hero, goblinB)
 
 if __name__ == "__main__":
 	game_loop()
