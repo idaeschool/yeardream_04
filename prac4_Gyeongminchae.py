@@ -11,7 +11,11 @@ def read_file():
         for f_name in os.listdir('yeardream_04'):
             if file_name in f_name:
                 print({file_name})
+<<<<<<< HEAD
     except:
+=======
+    except :
+>>>>>>> 18f0f1d628500f853b70585e5705aca9d97dd61f
         print(f'{file_name} Not Found')
         pass
 

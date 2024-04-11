@@ -1,6 +1,6 @@
 # main.py
 import argparse
-import prac1
+import prac1 # 같은 경로의 prac1.py를 불러오겠다!
 import prac2
 import prac3
 
@@ -15,6 +15,7 @@ def main():
         prac2.sum_two_numbers()
     elif args.script == 'prac3':
         prac3.calculate_average()
+
 
 if __name__ == "__main__":
     main()
