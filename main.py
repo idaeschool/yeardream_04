@@ -1,6 +1,6 @@
 # main.py
 import argparse
-import prac1
+import prac1 #를 불러오겠다!
 import prac2
 import prac3
 
