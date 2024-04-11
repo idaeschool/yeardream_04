@@ -5,15 +5,14 @@ class Character:
 	def __init__(self, name, health):
 		self.name = name
 		self.health = health
-		damage = 0
 
 	def is_alive(self):
 		return self.health > 0
 
 	def attack(self, other):
-		self.damage = random.randint(5, 20)
-		other.health -= self.damage
-		print(f"{self.name} attacks {other.name} for {self.damage} damage. {other.name} now has {other.health} health.")
+		damage = random.randint(5, 20)
+		other.health -= damage
+		print(f"{self.name} attacks {other.name} for {damage} damage. {other.name} now has {other.health} health.")
 
 class Player(Character):
 	def __init__(self, name, health=100):
