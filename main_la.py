@@ -1,9 +1,9 @@
 # main.py
 import argparse
-import prac1
-import prac2
-import prac3
-import prac4
+import prac1_la
+import prac2_la
+import prac3_la
+import prac4_la
 
 def main():
     parser = argparse.ArgumentParser(description="Run practice Python scripts.")
@@ -11,13 +11,13 @@ def main():
     args = parser.parse_args()
 
     if args.script == 'prac1':
-        prac1.say_hello()
+        prac1_la.say_hello()
     elif args.script == 'prac2':
-        prac2.sum_two_numbers()
+        prac2_la.sum_two_numbers()
     elif args.script == 'prac3':
-        prac3.calculate_average()
+        prac3_la.calculate_average()
     elif args.script == 'prac4':
-        prac4.read_file()
+        prac4_la.read_file()
 
 if __name__ == "__main__":
     main()
