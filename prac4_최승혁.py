@@ -10,7 +10,7 @@ def read_file():
         with open(file_name, 'r') as f:
             contents = f.read()
             print(contents)
-    except :
+    except:
         print("Error")
 
 if __name__ == "__main__":
