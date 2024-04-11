@@ -3,7 +3,7 @@ import argparse
 import prac1
 import prac2
 import prac3
-import prac6
+import prac6_임승민
 
 def main():
     parser = argparse.ArgumentParser(description="Run practice Python scripts.")
@@ -17,6 +17,6 @@ def main():
     elif args.script == 'prac3':
         prac3.calculate_average()
     elif args.script == 'prac6' :
-        prac6.game_loop()
+        prac6_임승민.game_loop()
 if __name__ == "__main__":
     main()
