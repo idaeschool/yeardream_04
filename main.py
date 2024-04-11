@@ -4,7 +4,7 @@ import prac1
 import prac2
 import prac3
 import yeardream_04.prac4_kwon as prac4_kwon
-import yeardream_04.prac5_kwon as prac5_kwon
+import yeardream_04.prac5_kwon_last as prac5_kwon_last
 
 def main():
     parser = argparse.ArgumentParser(description="Run practice Python scripts.")
@@ -20,7 +20,7 @@ def main():
     elif args.script == 'prac4':
         prac4_kwon.read_file()
     elif args.script == 'prac5':
-        prac5_kwon.main()
+        prac5_kwon_last.main()
 
 if __name__ == "__main__":
     main()
