@@ -11,7 +11,7 @@ def read_file():
             contents = file.read()
             print(contents)
     except FileNotFoundError:
-        print(f"Error: File '{file_name}' not found.")       
+        print(f"Error: '{file_name}'을 찾을 수 없습니다.")       
 
 if __name__ == "__main__":
     read_file()
