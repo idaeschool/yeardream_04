@@ -10,7 +10,7 @@ def read_file():
         with open(file_name, 'r') as file:
             print(f"{file_name} 파일이 존재합니다.")
     except FileNotFoundError:
-        # 파일이 존재하지 않는 경우 예외 처리
+        # 파일이 존재하지 않는 경우 예외 처리함
         print(f"{file_name} 파일이 존재하지 않습니다.")
 
 if __name__ == "__main__":
