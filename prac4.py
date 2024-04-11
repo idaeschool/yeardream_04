@@ -7,6 +7,12 @@ def read_file():
     '''
     file_name = input("파일 이름을 입력하시오.")
     try: f = open(f"{file_name}.txt", 'r')
+    while True:
+        line = f.readline()
+        if not line:
+            break
+        print(line)
+    f.close()
 
     except FileNotFoundError:
         pass
