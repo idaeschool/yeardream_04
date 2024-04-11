@@ -1,6 +1,6 @@
 # main.py
-import argparse
-import prac1
+import argparse #library
+import prac1 #import == 같은 경로 안에 prac.py를 불러옴
 import prac2
 import prac3
 
@@ -10,7 +10,7 @@ def main():
     args = parser.parse_args()
 
     if args.script == 'prac1':
-        prac1.say_hello()
+        prac1.say_hello() #prac1파일의 say_hello()를 실행
     elif args.script == 'prac2':
         prac2.sum_two_numbers()
     elif args.script == 'prac3':
