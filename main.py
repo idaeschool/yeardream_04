@@ -1,6 +1,6 @@
 # main.py
 import argparse
-import prac1
+import prac1    # prac1 연동
 import prac2
 import prac3
 
