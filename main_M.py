@@ -4,7 +4,7 @@ import prac1
 import prac2
 import prac3
 import prac4_M as prac4
-import prac5
+import prac5_M as prac5
 import prac6
 
 def main():
