@@ -3,8 +3,8 @@ import argparse
 import prac1
 import prac2
 import prac3
-import prac4
-import prac5
+import prac4_hgs_test
+import prac5_hgs_test
 
 def main():
     parser = argparse.ArgumentParser(description="Run practice Python scripts.")
@@ -18,9 +18,9 @@ def main():
     elif args.script == 'prac3':
         prac3.calculate_average()
     elif args.script == 'prac4':
-        prac4.read_file()
+        prac4_hgs_test.read_file()
     elif args.script == 'prac5':
-        prac5.main()
+        prac5_hgs_test.main()
 
 if __name__ == "__main__":
     main()
