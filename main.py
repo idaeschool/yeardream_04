@@ -3,6 +3,7 @@ import argparse
 import prac1
 import prac2
 import prac3
+import prac6
 
 def main():
     parser = argparse.ArgumentParser(description="Run practice Python scripts.")
@@ -15,6 +16,8 @@ def main():
         prac2.sum_two_numbers()
     elif args.script == 'prac3':
         prac3.calculate_average()
+    elif args.script == 'prac6':
+        prac6.game_loop()
 
 if __name__ == "__main__":
     main()
