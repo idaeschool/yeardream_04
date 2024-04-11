@@ -6,13 +6,12 @@ def read_file():
     단, 만약 파일이 존재하지 않는 경우에는 해당 에러를 예외처리하는 코드를 작성하여라.
     '''
     
-    file_name = input("파일 이름을 입력하시오: ")
-    
+    file_name = input("파일 이름을 입력하세요: ")
     try:
-        with open(file_name, 'r', encoding='utf-8') as file:
-            print(file.read())
-            
+        with open(file_name, 'r') as file:
+            print(f"{file_name} 파일이 존재합니다.")
     except FileNotFoundError:
+        # 파일이 존재하지 않는 경우 예외 처리
         print(f"{file_name} 파일이 존재하지 않습니다.")
         
 if __name__ == "__main__":
