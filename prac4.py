@@ -11,7 +11,9 @@ def read_file():
     try:
         if os.path.isfile(file_name):
             print(file_name)
-    except :
+        else: 
+            raise Exception()
+    except Exception:
         print("현재 경로에 해당 파일이 없습니다.")
 
 if __name__ == "__main__":
