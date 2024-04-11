@@ -1,6 +1,6 @@
 # main.py
 import argparse
-import prac1
+import prac1    # prac1.py를 불러오겠다는 의미
 import prac2
 import prac3
 
