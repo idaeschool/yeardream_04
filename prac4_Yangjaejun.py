@@ -1,4 +1,4 @@
-# prac4.py_20240411
+# prac4.py_20240411_양재준
 
 def read_file():
     '''

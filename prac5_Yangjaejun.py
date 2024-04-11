@@ -1,4 +1,4 @@
-# prac5.py_20240411
+# prac5.py_20240411_양재준
 
 class Zoo:
     def __init__(self):
