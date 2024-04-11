@@ -8,7 +8,7 @@ def read_file():
     file_name = input('file name : ')
     try:
         with open (file_name , 'r') as f:
-            read_file(f)
+            print(f.read())
     except :
         print("There isn't file")
 
