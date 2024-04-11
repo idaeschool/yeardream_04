@@ -7,15 +7,12 @@ def read_file():
     '''
     file_name = input("please type filename that you want to search: ")
     try:
-        fileList = os.listdir(".")
-        for x in fileList:
-            if x== file_name:
-                print("filename: ",x)
-                break
-        if file_name not in fileList:
-                print("That file does not Exist")
-    except :
-        print("File Not Exist")
+        with open(file_name,'r') as file:
+            print(file_name)
+            file.close()
+
+    except FileNotFoundError:
+        print("File Not Found")
 
 if __name__ == "__main__":
     read_file()
