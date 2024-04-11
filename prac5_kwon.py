@@ -1,18 +1,42 @@
 # prac5.py
 
+from typing import Any
+
+
 class Zoo:
     def __init__(self):
+        self.animal_list = []
         pass
 
     def add_animal(self, animal):
+        a, b = animal, self.animal_list
+        
+        if a not in b:
+            self.animal_list.append(a)
+        else :
+            print(f"\"{a.name} The {a.species}\"은 이미 동물원에 있습니다. 다른 이름을 사용하거나, 다른 종으로 추가해주세요.")
         pass
 
     def show_animals(self):
+        for i in self.animal_list:
+            print(f"{i.name} The {i.species}")
         pass
+
+    def show_animals_by_species(self, animal_name):
+        for i in self.animal_list:
+            if i.species == animal_name:
+                print(f"{i.name} The {i.species}")
+
+    def __repr__(self) -> str:
+        return f"{self.animal_list}"
 
 class Animal:
     def __init__(self, name, species):
+        self.name = name
+        self.species = species
         pass
+    def __repr__(self) -> str:
+        return f"{self.name, self.species}"
 
 def main():
     # 동물원을 선언하고 10마리의 동물들을 추가합니다.
@@ -28,8 +52,9 @@ def main():
     zoo.add_animal(Animal("Cary", "Crocodile"))
     zoo.add_animal(Animal("Mary", "Monkey"))
 
+    print(zoo)
     # 동물원에 있는 모든 동물을 출력합니다.
-    zoo.show_animals()
+    # zoo.show_animals()
     ## 출력 결과 : 
     '''
     현재 동물원에는 다음 동물들이 있습니다 :
@@ -46,13 +71,13 @@ def main():
     '''
 
     # 특정 종에 해당하는 동물들의 이름만 출력합니다.
-    zoo.show_animals_by_species("Lion")
+    # zoo.show_animals_by_species("Lion")
     # 출력 결과 : 
     '''
     - Leo the Lion
     - Terry the Lion
     '''
-    zoo.show_animals_by_species("Elephant")
+    # zoo.show_animals_by_species("Elephant")
     # 출력 결과 : 
     '''
     - Ella the Elephant
@@ -64,6 +89,6 @@ def main():
     '''
     "Leo the Lion"은 이미 동물원에 있습니다. 다른 이름을 사용하거나, 다른 종으로 추가해주세요.
     '''
-
+    # print(zoo)
 if __name__ == "__main__":
     main()
