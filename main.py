@@ -3,9 +3,9 @@ import argparse
 import prac1
 import prac2
 import prac3
-import prac4
-import prac5
-import prac6
+import prac4_양재준
+import prac5_양재준
+import prac6_양재준
 
 def main():
     parser = argparse.ArgumentParser(description="Run practice Python scripts.")
