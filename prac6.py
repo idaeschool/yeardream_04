@@ -14,19 +14,22 @@ class Character:
 
 class Player(Character):
     def __init__(self, name, health=100):
-         ## TO-DO ##
+        self.name = name
+        self.health = health
 
     def attack(self, other):
         damage = random.randint(5, 20)
-        ## TO-DO ##
+        other.health -= damage
         print(f"{self.name} attacks {other.name} for {damage} damage. {other.name} now has {other.health} health.")
 
 class Monster(Character):
     def __init__(self, name, health=50):
-        ## TO-DO ##
+        self.name = name
+        self.health = health
 
     def attack(self, other):
-        ## TO-DO ##
+        damage = random.randint(5, 20)
+        other.health -= damage
         print(f"{self.name} attacks {other.name} for {damage} damage. {other.name} now has {other.health} health.")
 
 def game_loop():
